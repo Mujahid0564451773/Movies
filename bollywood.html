@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bollywood Movies</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+        }
         .grid-container {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
+            margin: 20px auto;
             gap: 20px;
-            margin: 20px 0;
+            max-width: 90%;
         }
         .movie-folder {
-            position: relative;
             width: 200px;
             height: 150px;
+            position: relative;
             cursor: pointer;
             border: 1px solid #ddd;
+            border-radius: 10px;
             overflow: hidden;
-            text-align: center;
-            border-radius: 8px;
         }
         .movie-folder img {
             width: 100%;
@@ -41,30 +51,25 @@
         }
         .folder-title {
             position: absolute;
-            bottom: 5px;
+            bottom: 0;
             left: 0;
             right: 0;
-            color: white;
             background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
             padding: 5px;
-            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <h1>Bollywood Movies</h1>
-    
-    <!-- List View from Google Drive -->
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1hGSh0Vdd2nr_QVCtOzhc5TtVQUa83ITS#grid" 
-            width="100%" height="600" frameborder="0"></iframe>
 
-    <!-- Grid View Section -->
     <h2>Featured Folders</h2>
     <div class="grid-container">
         <!-- Gali Folder -->
-        <div class="movie-folder" onclick="window.open('https://drive.google.com/drive/u/1/folders/1xFnHpOD4-ibSpRgPHi3jCax7jXgeV_BO', '_blank')">
-            <img class="placeholder" src="https://via.placeholder.com/250x150.png?text=Bollywood+Folder" alt="Placeholder">
-            <img class="gif" src="https://drive.google.com/uc?export=view&id=1xFnHpOD4-ibSpRgPHi3jCax7jXgeV_BO" alt="GIF">
+        <div class="movie-folder" onclick="window.open('https://drive.google.com/drive/folders/1xFnHpOD4-ibSpRgPHi3jCax7jXgeV_BO', '_blank')">
+            <img class="placeholder" src="https://via.placeholder.com/200x150.png?text=Gali+Folder" alt="Placeholder">
+            <img class="gif" src="https://drive.google.com/uc?export=view&id=1VhtPcz5cLzYYh5eccg1-WFAvVxD8QTwR" alt="Gali GIF">
             <div class="folder-title">Gali Folder</div>
         </div>
     </div>
